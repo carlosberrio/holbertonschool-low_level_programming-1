@@ -12,7 +12,6 @@ int main(void)
 	long long int longLongIngType;
 	float floatType;
 /* Printing results */
-	
 	printf("Size of a char: %ld byte\n"(s), sizeof(charType));
 	printf("Size of an int: %ld bytes\n"(s), sizeof(intType));
 	printf("Size of a long int: %ld bytes\n"(s), sizeof(longinType));
