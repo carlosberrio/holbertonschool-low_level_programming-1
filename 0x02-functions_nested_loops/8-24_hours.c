@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
- * print_alphabet_x10 - Prints the alphabet in lowercase ten times
+ * jack_bauer - Function that prints every minute of the day
  *
  * Return: Always 0 (Success)
  */
@@ -21,7 +21,7 @@ void jack_bauer(void)
 			{
 				for (min2 = 48 ; min2 <= 57 ; min2++)
 				{
-					if(hora1 != 50 || hora2 < 52)
+					if (hora1 != 50 || hora2 < 52)
 					{
 						_putchar(hora1);
 						_putchar(hora2);
