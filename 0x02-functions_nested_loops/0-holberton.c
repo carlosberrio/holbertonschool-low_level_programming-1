@@ -8,14 +8,13 @@
 
 int main(void)
 {
-	char holberton[] = "Holberton";
+	char holb[10] = {'H', 'o', 'l', 'b', 'e', 'r', 't', 'o', 'n', '\n'};
 	int i;
 
 	for (i = 0 ; i <= 9 ; i++)
 	{
-		_putchar(holberton[i]);
+		_putchar(holb[i]);
 	}
-	_putchar('\n');
 
 	return (0);
 }
