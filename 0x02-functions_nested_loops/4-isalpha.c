@@ -1,8 +1,8 @@
 #include "holberton.h"
 
 /**
- * _isalpha function that checks for letter characters.
- *
+ * _isalpha - function that checks for letter characters.
+ * @c: input integer
  * Return: Always 1 (Success)
  */
 
@@ -17,5 +17,4 @@ int _isalpha(int c)
 	{
 		return (0);
 	}
-	_putchar('\n');
 }
