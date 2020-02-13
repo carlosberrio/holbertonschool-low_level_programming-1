@@ -1,4 +1,4 @@
-A#include "holberton.h"
+#include "holberton.h"
 
 /**
  * print_line - draws a straight line in the terminal.
