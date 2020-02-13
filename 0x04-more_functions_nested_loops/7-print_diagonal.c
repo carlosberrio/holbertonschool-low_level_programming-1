@@ -2,7 +2,7 @@
 
 /**
  * print_diagonal - Write a function that draws a diagonal line on the terminal
- * @diagonal: diagonal to print
+ * @diagonals: diagonal to print
  * Return: Always 0 (Success)
  */
 
