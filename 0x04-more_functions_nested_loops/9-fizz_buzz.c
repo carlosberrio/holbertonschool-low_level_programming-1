@@ -14,7 +14,7 @@ int main(void)
 	{
 		if (num % 15 == 0)
 		{
-			printf("Fizz Buzz");
+			printf("FizzBuzz");
 		}
 		else if (num % 3 == 0)
 		{
@@ -28,7 +28,7 @@ int main(void)
 		{
 		printf("%d", num);
 		}
-		if(num != 100)
+		if (num != 100)
 		{
 			printf(" ");
 		}
