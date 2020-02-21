@@ -3,13 +3,13 @@
 /**
  * *cap_string - Function that capitalize
  * @str: string
- * Return: string changed to uppercase
+ * Return: capitalize lowercase
  */
 char *cap_string(char *str)
 {
 	int ch, c;
 
-	char sign[] = {' ', '\t', '\n', ',', ';', '.', '!','?',
+	char sign[] = {' ', '\t', '\n', ',', ';', '.', '!', '?',
 		       '"', '(', ')', '{', '}'};
 
 	if (str[0] >= 97 && str[0] <= 122)
