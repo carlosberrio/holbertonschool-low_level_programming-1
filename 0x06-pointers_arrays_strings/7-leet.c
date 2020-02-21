@@ -1,9 +1,9 @@
 #include "holberton.h"
 
 /**
- * *leet - Function that reverses the content of an array of integers.
+ * *leet - Function that encode a string in leet
  * @str: strings character to change
- * Return: char
+ * Return: encripted string
  */
 char *leet(char *str)
 {
@@ -13,7 +13,7 @@ char *leet(char *str)
 	char minus[] = "aeolt";
 	char numbers[] = "43017";
 
-       	for (ch = 0 ; str[ch] != '\n' ; ch++)
+	for (ch = 0 ; str[ch] != '\0' ; ch++)
 	{
 		for (c = 0 ; c < 5 ; c++)
 		{
