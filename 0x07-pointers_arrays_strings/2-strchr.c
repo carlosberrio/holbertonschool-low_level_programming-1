@@ -16,6 +16,6 @@ char *_strchr(char *s, char c)
 		{
 			break;
 		}
-	}
+	} /* Con return (s + i ) enviamos la pos del char encontrado */
 	return (s[i] == c ? (s + i) : '\0');
 }
