@@ -11,9 +11,9 @@ int main(int argc, char *argv[])
 {
 	int c, mul = 1;
 
-	if(argc > 1)
+	if (argc > 1)
 	{
-		for(c = 1; c < argc; c++)
+		for (c = 1; c < argc; c++)
 		{
 			mul *= atoi(argv[c]);
 		}
@@ -22,7 +22,7 @@ int main(int argc, char *argv[])
 	else
 	{
 		printf("Error\n");
+		return (1);
 	}
-
-	return (1);
+	return (0);
 }
