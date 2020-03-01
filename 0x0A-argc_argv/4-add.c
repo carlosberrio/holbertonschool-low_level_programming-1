@@ -4,6 +4,9 @@
  * main - Write a program that adds positive numbers.
  * @argc: arguments count.
  * @argv: array of strings.
+ * ((int)argv[c][d] do cast from char to int.
+ * V2 = argv[c][d] < '0' || argv[c][d] > '9'
+ * V3 = int _isdigit(char *str)
  * Return: 1 if the program does not receive two arguments or mul result
  */
 
