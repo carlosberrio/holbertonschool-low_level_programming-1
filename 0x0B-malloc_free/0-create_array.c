@@ -21,5 +21,9 @@ char *create_array(unsigned int size, char c)
 	{
 		new_arr[i] = c;
 	}
+	if (new_arr == NULL)
+	{
+		return (NULL);
+	}
 	return (new_arr);
 }
