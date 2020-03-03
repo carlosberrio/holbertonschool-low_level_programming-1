@@ -36,7 +36,7 @@ char *_strdup(char *str)
 
 	size = _strlen(str);
 
-	if (str == '\0')
+	if (str == NULL)
 	{
 		return (NULL);
 	}
