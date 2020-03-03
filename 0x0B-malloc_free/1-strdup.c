@@ -35,13 +35,13 @@ char *_strdup(char *str)
 	int i, size;
 	char *new_arr;
 
-	size = _strlen(str);
+	size = _strlen(str) + 1;
 
 	if (str == NULL)
 	{
 		return (NULL);
 	}
-	new_arr = malloc(size * sizeof(char) + 1);
+	new_arr = malloc(size * sizeof(char));
 	if (new_arr == NULL)
 	{
 		return (NULL);
