@@ -3,10 +3,12 @@
 #include <string.h>
 
 /**
- * *malloc_checked - allocates memory using malloc and returns a pointer
+ * *string_nconcat - concatenates two strings
  * to the allocated memory
- * @b: size of the input variable
- * Return: pointer to the allocated memory
+ * @s1: first string
+ * @s2: second string
+ * @n: n bytes to copy from s2
+ * Return: pointer to the new string
  */
 
 char *string_nconcat(char *s1, char *s2, unsigned int n)
@@ -21,7 +23,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 
 	s1_size = strlen(s1);
 
-	str = malloc(sizeof s1_size + n + 1);
+	str = malloc(sizeof(s1_size) + n + 1);
 
 	if (str == NULL)
 		return (NULL);
