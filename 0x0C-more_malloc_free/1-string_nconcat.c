@@ -1,8 +1,5 @@
-#include "holberton.h"
 #include <stdlib.h>
-#include <stdio.h>
-
-int _strlen(char *s);
+#include "holberton.h"
 
 /**
  * _strlen - returns the length of a string.
@@ -35,7 +32,7 @@ int _strlen(char *s)
 
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	unsigned int i, size_s1, size_s2, total_size;
+	unsigned int i, j, size_s1, size_s2, total_size;
 	char *new_arr;
 
 	if (s1 == NULL)
@@ -66,12 +63,12 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		new_arr[i] = s1[i];
 	}
 
-	for (i = 0 ; i < n ; i++)
+	for (j = 0 ; j < n ; j++)
 	{
-		new_arr[size_s1 + i] = s2[i];
+		new_arr[i + j] = s2[j];
 	}
 
-	new_arr[total_size + 1] = '\0';
+	new_arr[i + j + 1] = '\0';
 
 	return (new_arr);
 }
