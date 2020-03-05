@@ -34,11 +34,11 @@ int _strlen(char *s)
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *str;
-	unsigned int i, s1_size, s2_size;
+	unsigned int c, d, s1_size, s2_size;
 
-	if (!s1)
+	if (s1 == NULL)
 		s1 = "";
-	if (!s2)
+	if (s2 == NULL)
 		s2 = "";
 
 	s1_size = _strlen(s1);
@@ -52,15 +52,15 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	if (str == NULL)
 		return (NULL);
 
-	for (i = 0; i < s1_size; i++)
+	for (c = 0; c < s1_size; c++)
 	{
-		str[i] = s1[i];
+		str[c] = s1[c];
 	}
-	for (i = 0; i < n; i++)
+	for (d = 0; d < n; d++)
 	{
-		str[s1_size + i] = s2[i];
+		str[c + d] = s2[d];
 	}
-	str[s1_size + i + 1] = '\0';
+	str[c + d + 1] = '\0';
 
 	return (str);
 }
