@@ -33,34 +33,38 @@ int _strlen(char *s)
 
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	char *str;
-	unsigned int c, d, s1_size, s2_size;
+	unsigned int i, size_s1, size_s2, total_size;
+	char *new_arr;
 
 	if (s1 == NULL)
+	{
 		s1 = "";
+	}
 	if (s2 == NULL)
+	{
 		s2 = "";
+	}
+	size_s1 = _strlen(s1);
+	size_s2 = _strlen(s2);
 
-	s1_size = _strlen(s1);
-	s2_size = _strlen(s2);
+	if (n < size_s2)
+		total_size = size_s1 + n;
+	if (n >= size_s2)
+		total_size = size_s1 + size_s2;
 
-	if (n > s2_size)
-		n = s2_size;
-
-	str = malloc(sizeof(char) * (s1_size + n) + 1);
-
-	if (str == NULL)
+	new_arr = malloc((total_size * sizeof(char)) + 1);
+	if (new_arr == NULL)
+	{
 		return (NULL);
-
-	for (c = 0; c < s1_size; c++)
-	{
-		str[c] = s1[c];
 	}
-	for (d = 0; d < n; d++)
+	for (i = 0 ; i < size_s1 ; i++)
 	{
-		str[c + d] = s2[d];
+		new_arr[i] = s1[i];
 	}
-	str[c + d + 1] = '\0';
-
-	return (str);
+	for (i = 0 ; i < size_s2 ; i++)
+	{
+		new_arr[size_s1 + i] = s2[i];
+	}
+	new_arr[total_size + 1] = '\0';
+	return (new_arr);
 }
