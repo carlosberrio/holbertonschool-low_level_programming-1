@@ -68,7 +68,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		new_arr[i + j] = s2[j];
 	}
 
-	new_arr[i + j + 1] = '\0';
+	new_arr[i + j] = '\0';
 
 	return (new_arr);
 }
