@@ -21,8 +21,11 @@ int *array_range(int min, int max)
 	if (ptr == NULL)
 		return (NULL);
 
-	for (i = min; i <= max; i++)
-		ptr[i] = i;
+	for (i = 0; i <= (max - min); i++)
+	{
+		ptr[i] = min;
+		++min;
+	}
 
 	return (ptr);
 }
