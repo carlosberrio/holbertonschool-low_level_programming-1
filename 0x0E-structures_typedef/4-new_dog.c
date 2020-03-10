@@ -65,7 +65,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 	{
 		the_dog->name[i] = name[i];
 	}
-	the_dog->name[i] = '\0';
+	the_dog->name[i] = '\0'; /* with <= it copies null char */
 
 	for (j = 0; j < len_owner; j++)
 	{
