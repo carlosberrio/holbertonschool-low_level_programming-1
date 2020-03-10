@@ -1,5 +1,4 @@
 #include "dog.h"
-#include <stdio.h>
 #include <stdlib.h>
 
 int _strlen(char *s);
@@ -62,13 +61,13 @@ dog_t *new_dog(char *name, float age, char *owner)
 		return (NULL);
 	}
 
-	for (i = 0; i <= len_name; i++)
+	for (i = 0; i < len_name; i++)
 	{
 		the_dog->name[i] = name[i];
 	}
 	the_dog->name[i] = '\0';
 
-	for (j = 0; j <= len_owner; j++)
+	for (j = 0; j < len_owner; j++)
 	{
 		the_dog->owner[j] = owner[j];
 	}
