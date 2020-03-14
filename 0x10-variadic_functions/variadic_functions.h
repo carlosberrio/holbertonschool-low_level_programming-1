@@ -6,7 +6,7 @@
 #include <stdlib.h>
 
 /**
- * struct formats - Struct to select specifiers
+ * struct specifiers - Struct to select specifiers
  *
  * @spec: specifier to select
  * @f: The function associated
@@ -16,7 +16,7 @@ typedef struct specifiers
 {
 	char *spec;
 	void (*f)(va_list *);
-}fts;
+} fts;
 
 int sum_them_all(const unsigned int n, ...);
 void print_numbers(const char *separator, const unsigned int n, ...);
