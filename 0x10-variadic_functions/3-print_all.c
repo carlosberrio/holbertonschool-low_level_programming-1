@@ -17,9 +17,9 @@ void print_all(const char * const format, ...)
 
 	int c, d;
 	char *separator = "";
-        va_list args;
+	va_list args;
 
-        va_start(args, format);
+	va_start(args, format);
 
 	d = 0;
 
