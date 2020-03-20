@@ -1,6 +1,6 @@
 #include "holberton.h"
 #include <stdlib.h>
-
+#include <stdio.h>
 int _strlen(char *s);
 
 /**
@@ -47,6 +47,11 @@ char *str_concat(char *s1, char *s2)
 	size_s1 = _strlen(s1);
 	size_s2 = _strlen(s2);
 	total_size = size_s1 + size_s2;
+
+	printf("size 1 %d \n", size_s1);
+	printf("size 2 %d \n", size_s2); 
+	printf("total %d \n", total_size); 
+
 
 	new_arr = malloc((total_size * sizeof(char)) + 1);
 	if (new_arr == NULL)
