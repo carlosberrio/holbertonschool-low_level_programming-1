@@ -10,15 +10,15 @@
 int delete_nodeint_at_index(listint_t **head, unsigned int index)
 {
 	unsigned int nodes_counter = 0;
-	listint_t *node_deleted;
+	listint_t *deleted_node;
 
 	while ((*head))
 	{
 		if (nodes_counter == index)
 		{
-			node_deleted = (*head);
+			deleted_node = (*head);
 			(*head) = (*head)->next;
-			free(node_deleted);
+			free(deleted_node);
 			return (1);
 		}
 
