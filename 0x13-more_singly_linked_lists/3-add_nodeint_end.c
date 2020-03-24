@@ -9,7 +9,7 @@
 
 listint_t *add_nodeint_end(listint_t **head, const int n)
 {
-	listint_t *new, *tmp;
+	listint_t *new;
 
 	new = malloc(sizeof(listint_t));
 
@@ -19,19 +19,16 @@ listint_t *add_nodeint_end(listint_t **head, const int n)
 	new->n = n;
 	new->next = NULL;
 
-/* Checking head if its NULL */
 	if (*head == NULL)
-	{ /*en ant return new, here head, check vs ant project bc it works */
+	{
 		*head = new;
 		return (*head);
 	}
 
-	tmp = *head; /* tmp to iterate without losing head */
+	while ((*head)->next != NULL)
+		head = &(*head)->next;
 
-	while (tmp->next != NULL)
-		tmp = tmp->next;
-
-	tmp->next = new;
+	(*head)->next = new;
 
 	return (new);
 }
