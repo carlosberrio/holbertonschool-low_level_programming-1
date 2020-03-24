@@ -9,11 +9,14 @@
 void free_listint2(listint_t **head)
 {
 	listint_t *tmp;
-/* if checker does not pass, put if head == NULL, etc */
+
+	if (head == NULL)
+		return;
+
 	while (*head != NULL)
 	{/* tmp is now head */
 		tmp = *head;
-/* Because procedence head should be inside parenthesis */
+/* Because precedence head should be inside parenthesis */
 		*head = (*head)->next;
 		free(tmp);
 	}
