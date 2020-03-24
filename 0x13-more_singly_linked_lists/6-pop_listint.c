@@ -9,13 +9,14 @@
 int pop_listint(listint_t **head)
 {
 	listint_t *new_head;
-	int num = (*head)->n; /* save int before delete it */
+	int num;
 
-	if ((*head)->n == NULL)
+	if (*head == NULL)
 		return (0);
 
-	new_head = *head;
-	(*head) = (*head)->next; /* unlink the head node for the caller */
+	num = (*head)->n;  /* save int before delete it */
+	new_head = *head; /* save a copy to the head to free later */
+	(*head) = (*head)->next; /* unlink the head and moves to the next */
 
 	free(new_head);
 
