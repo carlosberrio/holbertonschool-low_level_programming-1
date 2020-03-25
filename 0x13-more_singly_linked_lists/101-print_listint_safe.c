@@ -14,7 +14,7 @@ size_t print_listint_safe(const listint_t *head)
 	{
 		printf("[%p] %d\n", (void *)head, head->n);
 		nodes++;
-/*check directions to break the infinite loop */
+/*check addresses to break the infinite loop */
 		if ((void *)head > (void *)head->next)
 		{
 			head = head->next;
