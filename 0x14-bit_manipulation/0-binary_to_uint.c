@@ -2,6 +2,7 @@
 
 /**
  * binary_to_uint - Function that converts a binary number to an unsigned int
+ * formula (base^^exp) * number + rest of numbers
  * @b: pointer to a string of 0 and 1 chars
  * Return: the converted number, or 0 if there is one or more
  * chars in the string b that is not 0 or 1, or if b is NULL
@@ -11,12 +12,15 @@ unsigned int binary_to_uint(const char *b)
 {
 	unsigned int decimal = 0, length = 0, exp = 0;
 
+	if (b == NULL)
+		return (0);
+
 	while (b[length])
 		length++;
 
 	while (length)
 	{
-		if (!(b[length - 1] == '1' || b[length - 1] == '0'))
+		if (b[length - 1] != '1' && b[length - 1] != '0')
 			return (0);
 
 		decimal += _pow_recursion(2, exp) * (b[length - 1] - '0');
@@ -26,7 +30,6 @@ unsigned int binary_to_uint(const char *b)
 	}
 
 	return (decimal);
-
 }
 
 /**
