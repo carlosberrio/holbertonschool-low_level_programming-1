@@ -19,9 +19,7 @@ void print_binary(unsigned long int n)
 		decimal >>= 1;
 	}
 
-	c = size - 1;
-
-	for (; c >= 0; c--)
+	for (c = size - 1; c >= 0; c--)
 	{
 		bit = n >> c;
 			if (bit & 1)
@@ -30,5 +28,3 @@ void print_binary(unsigned long int n)
 				_putchar('0');
 	}
 }
-
-/*      int c = (int)(8 * sizeof(unsigned long int)) - 1; */
