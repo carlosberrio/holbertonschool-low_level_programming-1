@@ -1,9 +1,7 @@
 #include "holberton.h"
 
 /**
- * get_endianness - determines if the machine is big or little endian
- *
- * Description: Determines if the machine is a big or little endian
+ * get_endianness - Function that checks the endianness
  * Return: 0 if big endian, 1 if little endian
  */
 int get_endianness(void)
