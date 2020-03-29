@@ -11,27 +11,28 @@ void print_times_table(int n)
 {
 	int i, j, hundreds, tens, units, num;
 
-	if (n > 0 && n <= 15)
+	if (n > 0 && n < 15)
 	{
 		for (i = 0; i <= n; i++)
 		{
 			for (j = 0; j <= n; j++)
 			{
 				num = j * i;
+
+				hundreds = num / 100;
+				tens = (num % 100) / 10;
+				units = num % 10;
+
 				if (num < 10)
-					_putchar(num + '0');
+					_putchar(units + '0');
+
 				else if (num > 9 && num < 100)
 				{
-					units = num % 10;
-					tens = num / 10;
 					_putchar(tens + '0');
 					_putchar(units + '0');
 				}
 				else if (num > 99)
 				{
-					hundreds = num / 100;
-					tens = (num % 100) / 10;
-					units = num % 10;
 					_putchar(hundreds + '0');
 					_putchar(tens + '0');
 					_putchar(units + '0');
