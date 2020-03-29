@@ -30,7 +30,7 @@ void print_times_table(int n)
 				else if (num > 99)
 				{
 					hundreds = num / 100;
-					tens = num / 10 % 10;
+					tens = (num % 100) / 10;
 					units = num % 10;
 					_putchar(hundreds + '0');
 					_putchar(tens + '0');
