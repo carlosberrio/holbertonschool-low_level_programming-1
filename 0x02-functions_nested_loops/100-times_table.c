@@ -18,7 +18,6 @@ void print_times_table(int n)
 			for (j = 0; j <= n; j++)
 			{
 				num = j * i;
-
 				hundreds = num / 100;
 				tens = (num % 100) / 10;
 				units = num % 10;
