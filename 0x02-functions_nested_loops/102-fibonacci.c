@@ -10,14 +10,14 @@
 int main(void)
 {
 	int n = 0;
-	long long int prev = 0, res = 1, sum = 0;
+	long prev = 0, res = 1, sum = 0;
 
 	while (n < 50)
 	{
 		sum = prev + res;
 		prev = res;
 		res = sum;
-		printf("%lld", sum);
+		printf("%ld", sum);
 
 		if (n < 49)
 			printf(", ");
