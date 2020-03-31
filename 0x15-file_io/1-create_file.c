@@ -1,10 +1,11 @@
 #include "holberton.h"
 
 /**
- * read_textfile - reads a text file and prints it to the POSIX standard output
- * @filename: file to be read
- * @letters: number of letters it should read and print
- * Return: 1 on success, -1 on failure (file can not be created, file can not be written, write fails, etc)
+ * create_file - Create a function that creates a file
+ * @filename: file to be created
+ * @text_content: string to be copied
+ * Return: 1 on success, -1 on failure (file can not be created,
+ * file can not be written, write fails, etc)
  */
 
 int create_file(const char *filename, char *text_content)
@@ -16,8 +17,6 @@ int create_file(const char *filename, char *text_content)
 
 	while (text_content[size] != '\0')
 		size++;
-
-	size++;
 
 	fd = open(filename, O_RDWR | O_CREAT | O_TRUNC, 0600);
 
