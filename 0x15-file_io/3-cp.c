@@ -30,32 +30,38 @@ void copy_file(char *file_from, char *file_to)
 
 	fd_from = open(file_from, O_RDONLY);
 
-	buffer = malloc(sizeof(char) * 1024);
-
-	r_bytes = read(fd_from, buffer, 1024);
-
-	if (file_from  == NULL || fd_from == -1 || r_bytes == -1)
+	if (file_from  == NULL || fd_from == -1)
 	{
-		free(buffer);
-		close(fd_from);
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file_from);
 		exit(98);
 	}
-
 	fd_to = open(file_to, O_CREAT | O_TRUNC | O_RDWR, 00664);
-
-	r_write = write(fd_to, buffer, r_bytes);
-
-	if (r_write == -1)
+	if (fd_to == -1)
 	{
 		close(fd_from);
-		close(fd_to);
-		free(buffer);
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file_to);
 		exit(99);
 	}
-
-	free(buffer);
+	buffer = malloc(sizeof(char) * 1024);
+	while ((r_bytes = read(fd_from, buffer, 1024)) != 0)
+	{
+		if (r_bytes == -1)
+		{
+			close(fd_from);
+			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file_from);
+			exit(98);
+		}
+		r_write = write(fd_to, buffer, r_bytes);
+		if (r_write == -1)
+		{
+			close(fd_from);
+			close(fd_to);
+			free(buffer);
+			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file_to);
+			exit(99);
+		}
+	}
 	close(fd_from);
 	close(fd_to);
+	free(buffer);
 }
