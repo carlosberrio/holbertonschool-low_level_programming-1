@@ -51,15 +51,15 @@ void copy_file(char *file_from, char *file_to)
 		}
 
 		r_write = write(fd_to, buffer, r_bytes);
-
-		if (r_write == -1)
-		{
-			close(fd_from);
-			close(fd_to);
-			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file_to);
-			exit(99);
-		}
 	}
+	if (r_write == -1)
+	{
+		close(fd_from);
+		close(fd_to);
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file_to);
+		exit(99);
+	}
+
 	if (close(fd_from) == -1)
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd_from), exit(100);
 
