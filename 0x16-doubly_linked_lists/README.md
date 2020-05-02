@@ -1,4 +1,4 @@
-# 0x17. C - Doubly linked lists
+# 0x16. C - Doubly linked lists
 
 ### Resources:
 * [Doubly Linked List - Implementation in C/C++](https://www.youtube.com/watch?v=VOQNf1VxU3Q)
