@@ -30,4 +30,7 @@ int sum_dlistint(dlistint_t *head);
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n);
 int delete_dnodeint_at_index(dlistint_t **head, unsigned int index);
 
+/* custom */
+void print_dlistint_reverse(const dlistint_t *current);
+
 #endif /*LISTS_H*/
