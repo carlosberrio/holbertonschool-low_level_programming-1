@@ -9,7 +9,11 @@
 * What are variables and how to set and use them
 
 ### Resources:
-* []()
+* [C Programming: Makefiles](https://www.youtube.com/watch?v=GExnnTaBELk)
+* [What is a Makefile and how does it work?](https://opensource.com/article/18/8/what-how-makefile)
+* [GNU make](https://www.gnu.org/software/make/manual/make.html)
+* [Substitution References](https://www.gnu.org/software/make/manual/html_node/Substitution-Refs.html)
+* [Makefile syntax: what is $(RM)?](https://stackoverflow.com/questions/40907379/makefile-syntax-what-is-rm)
 
 ### Author:
 * Tatiana Orejuela Zapata | [Github](https://github.com/tatsOre)
